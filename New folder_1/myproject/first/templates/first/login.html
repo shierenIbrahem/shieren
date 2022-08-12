@@ -1,0 +1,30 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+        <title>First Project</title>
+</head>
+
+<body>
+    <form method="POST" >
+      	{% csrf_token %}
+          <script type="text/javascript">
+              if ({{alert}}==1)
+              {
+                alert("You dont have an account for this information")
+              }
+          </script>
+        
+      	
+        SSN:       <input type="number" name="ssn"><br>
+        PASSWORD : <input type="password" name="password"><br>
+
+        <input type='submit' value='Register' >
+        <br>
+        if you dont have account please<a href="{% url 'signup'%}">SignIn</a>
+        
+    </form>
+
+   
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First Project</title>
+</head>
+
+<body>
+	<h1>{{user.username}}</h1>
+	<form method="GET">
+		{% csrf_token %}
+		
+		<input type="number" name="id_" value={{user.id}} hidden=True>
+		<button type="submit"><a href="{%  url 'profile'%}">Profile</a></button><br>
+	</form> 
+	
+	______________________________________________
+		<br>
+		<br>
+		<br>
+
+		<button><a href="{%  url 'first_p'%}">Reservation</a></button><br>
+		<button><a href="{%  url 'second_p'%}">Reservation for moving</a></button><br>
+		<button><a href="{%  url 'third_p'%}">Reservation for staying</a></button><br>
+		<button><a href="{%  url 'four_p'%}">inquiry about papers</a></button><br>
+	 
+   
+</body>
+</html>

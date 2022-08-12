@@ -1,0 +1,70 @@
+
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+        <title>First Project</title>
+</head>
+<body>
+	
+	<a href="{%  url 'services'%}">back</a>
+	
+	<br>
+	<br>
+	Reservation:
+	<br>
+	<br>
+	{% for i in x1 %}
+
+		<form method="GET">
+				{% csrf_token %}
+				{{i.date}}
+				<input type="number" name="ty" value=1 hidden=true>
+				<input type="date" name="date1" value={{i.date}} hidden=true>
+				<input type="submit" value="cancel" >
+				<br>
+		</form>
+
+	{% endfor %}
+	<br>
+	<br>
+	Moving:
+	<br>
+	<br>
+	{% for i in x2 %}
+
+		<form method="GET">
+				{% csrf_token %}
+				{{i.date}}
+				<input type="number" name="ty" value=2 hidden=true>
+				<input type="date" name="date1" value ={{i.date}} hidden=true>
+				<input type="submit" value="cancel" >
+				<br>
+		</form>
+
+	{% endfor %}
+
+	<br>
+	<br>
+	Staying:
+	<br>
+	<br>
+	{% for i in x3 %}
+
+		<form method="GET">
+				{% csrf_token %}
+				{{i.date}}
+				<input type="number" name="ty" value=3 hidden=true>
+				<input type="date" name="date1" value={{i.date}} hidden=true>
+				<input type="submit" value="cancel" >
+				<br>
+		</form>
+
+	{% endfor %}
+	
+ 	
+ 	<br>
+	<br>
+	<br>
+</body>
+</html>

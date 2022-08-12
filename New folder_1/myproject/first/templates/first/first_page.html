@@ -1,0 +1,48 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+        <title>First Project</title>
+</head>
+
+<body>
+	<a href="{%  url 'services'%}">back</a>
+
+	<br>
+	<br>
+	<br>
+
+	<form method="POST">
+		{% csrf_token %}
+
+		 <script type="text/javascript">
+              if ({{alert}}==1)
+              {
+                alert("This date is not available, choice another date")
+              }
+          </script>
+
+		<input type="radio" name="n1" value=True>Internal
+		<input type="radio" name="n1" value=False>External
+
+		<br>
+		<br>
+
+		<input type="radio" name="n2" value=True>Normal
+		<input type="radio" name="n2" value=False>Immedate
+
+		<br>
+		<br>
+
+		<input type="date" name="dd" value="2022-03-03">
+
+		<br>
+		<br>
+		
+		<input type="number" name="id_" value={{user.id}} hidden=True>
+		<input type='submit' value='confirm'>
+	</form>
+	  
+   
+</body>
+</html>
